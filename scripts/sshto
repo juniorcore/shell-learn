@@ -1,0 +1,91 @@
+#!/bin/bash
+
+server=$1;
+por=$2;
+
+[ $# -eq 0 ]  && { echo "Usage: sshto <server>"; exit 1; }
+
+case "$server" in 
+
+	1) 	/usr/bin/ssh -l root s1 -p 65002;
+		;;
+
+	2) 	/usr/bin/ssh -l root s2 -p 65002;
+		;;
+
+	3) 	/usr/bin/ssh -l root s3 -p 65002;
+		;;	
+
+	4) 	/usr/bin/ssh -l root s4 -p 65002;
+		;;
+
+	5) 	/usr/bin/ssh -l root s5 -p 65002;
+		;;
+
+	6) 	/usr/bin/ssh -l root s6 -p 65002;
+		;;	
+
+	7) 	/usr/bin/ssh -l root s7 -p 65002;
+		;;
+
+	8) 	/usr/bin/ssh -l root s8 -p 65002;
+		;;
+
+	9) 	/usr/bin/ssh -l root s9 -p 65002;
+		;;
+
+	10) /usr/bin/ssh -l root s10 -p 65002;
+		;;
+
+	11) /usr/bin/ssh -l root s11 -p 65002;
+		;;
+
+	12) /usr/bin/ssh -l root s12 -p 65002;
+		;;
+
+	13)	/usr/bin/ssh -l root s13 -p 65002;
+		;;
+
+	14)	/usr/bin/ssh -l root s14 -p 65002;
+		;;
+
+	15)	/usr/bin/ssh -l root s15 -p 65002;
+		;;	
+
+	16) /usr/bin/ssh -l root s16 -p 65002;
+		;;
+
+	17) /usr/bin/ssh -l root s17 -p 65002;
+		;;
+
+	18) /usr/bin/ssh -l root s18 -p 65002;
+		;;	
+
+	19)	/usr/bin/ssh -l root s19 -p 65002;
+		;;
+
+	20)	/usr/bin/ssh -l root s20 -p 65002;
+		;;
+
+	21)	/usr/bin/ssh -l root s21 -p 65002;
+		;;
+
+	22) /usr/bin/ssh -l root s22 -p 65002;
+		;;
+
+	23) /usr/bin/ssh -l root s23 -p 65002;
+		;;
+
+	24)	/usr/bin/ssh -l root s24 -p 65002;
+		;;	
+
+	*)	if [[ -z "$por" ]] #cek variable kosong / empty - check "man test"
+		then
+			/usr/bin/ssh -l root $server -p 65001;	
+		else
+			/usr/bin/ssh -l root $server -p $por;
+		fi
+		exit 0;
+		;;
+esac
+exit 0

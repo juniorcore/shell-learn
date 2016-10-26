@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -d "/media/indra/disk/test" ] 
+then
+    echo "Directory /media/indra/disk/test exists." 
+else
+    echo "nothing, let me create it..";
+    sleep 2
+    mkdir /media/indra/disk/test
+    echo "done"
+fi

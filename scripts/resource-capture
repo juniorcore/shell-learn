@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CPU=`uptime | awk '{print $8}' | sed s'/.$//'`;
+
+echo $CPU;
+
+if [[ $CPU>1 ]]
+then
+	ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10 > /media/indra/disk/history/log-`date +\%Y"-"\%m"-"\%d"-"\%k"-"\%M"-"\%s`.log
+else 
+	exit 0
+fi
+
+exit 0
