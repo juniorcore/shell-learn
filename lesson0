@@ -1,0 +1,9 @@
+# inputan setelah command :
+# contoh :
+# sshto 10
+var=$1; 
+# var = 10
+
+
+# cek empty variable :
+if [[ -z "$por" ]]
